@@ -29,7 +29,7 @@ Deploy an Azure SQL database in the Canada Central region within the resource gr
 - Set "Workload environment" to Development.
 - Backup storage redundancy: Locally-redundant storage.
 
-![Step 1 - Creating Resource Group](./Images/1.png "Resource Group Setup")
+![Step 1 - Creating Resource Group](./images/1.png "Resource Group Setup")
 Figure 1: Overview of the resource group created.
 
 ### 2.Network Configuring
@@ -39,7 +39,7 @@ On the "Create SQL Database" page:
 - Select Public endpoint for network connectivity.
 - Allow access from both Azure services and your current client IP.
 
-![Step 2 - Configuring Networking](./Images/2.png "Configuring Networking")
+![Step 2 - Configuring Networking](./images/2.png "Configuring Networking")
 Figure 2: overview info for SQL database.
 
 ### 3. Enable Sample Data
@@ -66,14 +66,14 @@ JOIN [SalesLT].[ProductCategory] AS c
     ON p.ProductCategoryID = c.ProductCategoryID;
 
 
-![Step 4 - Querying Database](./Images/4.png "Querying Database")
+![Step 4 - Querying Database](./images/4.png "Querying Database")
 Figure 3: Image shows the output for running the query inside the data.
 
 ### 5. Create Azure Storage Account
 
 Create a storage account with the default settings, then set up a container named productdata8912 within the storage account.
 
-![Step 5 - Azure Storage Account Setup](./Images/5.png "Azure Storage Account")
+![Step 5 - Azure Storage Account Setup](./images/5.png "Azure Storage Account")
 Figure 4: Overview of the storage account created.
 
 ### 6. Create and Configure Azure Data Factory
@@ -82,7 +82,7 @@ Deploy an Azure Data Factory and open its Data Factory Studio to begin managing 
 - Choose to ingest data using a built-in copy task.
 - Establish connections to both the Azure SQL Database and Azure Blob Storage.
 
-![Step 6 - Azure Data Factory Setup](./Images/7.png "Azure Data Factory")
+![Step 6 - Azure Data Factory Setup](./images/7.png "Azure Data Factory")
 Figure 5: Image shows the setup of Azure Data Factory Service.
 
 
@@ -105,7 +105,7 @@ Figure 5: Image shows the setup of Azure Data Factory Service.
 
 > *Note*: Use the correct database name and password created earlier for the SQL database.
 
-![Step 7 - Choosing Task Type](./Images/9.png "Choosing Task Type")
+![Step 7 - Choosing Task Type](./images/9.png "Choosing Task Type")
 Figure 9: Image shows the sample SQL data available inside the data factory.
 
 
@@ -117,7 +117,7 @@ Figure 9: Image shows the sample SQL data available inside the data factory.
 - Choose the source table SalesLT.Product from the dropdown menu.
 - Click *Next*, then preview the data to verify the selection.
 
-![Step 10 - Configuring Source Connection](./Images/10.png "Configuring Source Connection")
+![Step 10 - Configuring Source Connection](./images/10.png "Configuring Source Connection")
 Figure 10: In Azure Data Factory, use the Preview Data option to view a sample of the data from the selected source, such as the SalesLT.Product table.
 
 ---
@@ -126,7 +126,7 @@ Figure 10: In Azure Data Factory, use the Preview Data option to view a sample o
 
 - Click *Next, and choose the destination type as **Azure Blob Storage* from the dropdown.
 
-![Step 12 - Configuring Destination Type](./Images/11.png "Configuring Destination Type")
+![Step 12 - Configuring Destination Type](./images/11.png "Configuring Destination Type")
 Figure 12: Image shows the selection of Azure Blob Storage as the destination type.
 
 ---
@@ -153,7 +153,7 @@ Figure 12: Image shows the selection of Azure Blob Storage as the destination ty
 - Examine the pipeline settings, and then click Finish to complete the setup.
 - Go to the storage account container to confirm that the product CSV file has been successfully copied from the database to the storage
 
-![Step 15 - Verifying Data Transfer](./Images/12.png "Verifying Data Transfer")
+![Step 15 - Verifying Data Transfer](./images/12.png "Verifying Data Transfer")
 Figure 15: Image shows the overview of the data factory with pipeline information, including run status.
 
 ---
@@ -162,7 +162,7 @@ Figure 15: Image shows the overview of the data factory with pipeline informatio
 
 - Inspect the productdata8912 container to verify that the SalesLT.Product data has been successfully transferred from the Azure SQL database.
 
-![Step 16 - Verifying Data in Container](./Images/13.png "Verifying Data in Container")
+![Step 16 - Verifying Data in Container](./images/13.png "Verifying Data in Container")
 Figure 16: Image shows the productdata8912 container containing the SalesLT.Product data.
 
 ---
@@ -171,7 +171,7 @@ Figure 16: Image shows the productdata8912 container containing the SalesLT.Prod
 
 Deleting all resources created during the lab.
 
-![Step 9 - Deleting Resources](./Images/14.png "Deleting Resources")
+![Step 9 - Deleting Resources](./images/14.png "Deleting Resources")
 Figure 9: Image shows the deletion of all resources created for this lab project.
 
 ---
